@@ -1,0 +1,684 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="variables_set" id="zqqePAId;Lk@~LAG/%7," x="161" y="141">
+    <field name="VAR">client</field>
+    <value name="VALUE">
+      <block type="Client_constructor" id="|~^5{e=.a/EdDlD,j03+"></block>
+    </value>
+    <next>
+      <block type="variables_set" id="XMt_sOGkr@:_S/8G#[%R">
+        <field name="VAR">prefix</field>
+        <value name="VALUE">
+          <block type="text" id="{#pjH@18J-0eeUq|6@RI">
+            <field name="TEXT">&gt;&gt;</field>
+          </block>
+        </value>
+        <next>
+          <block type="Client_login" id="wB6d.4tu0=lNp3NzPj8O">
+            <value name="Client">
+              <block type="variables_get" id="H-umjuu@hk8^8M(]AN%u">
+                <field name="VAR">client</field>
+              </block>
+            </value>
+            <value name="token">
+              <block type="text" id="~!Gf0ANx=}~soC0DP8df">
+                <field name="TEXT"></field>
+              </block>
+            </value>
+            <next>
+              <block type="console_log" id="^T9Z6V55@g+zV^@,]Di$">
+                <value name="text">
+                  <shadow type="text" id="Me8~=]btSp{[gD,tf$}_">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block type="text" id="E{L@Uk_|g~];7JTU.qgQ">
+                    <field name="TEXT">Welcome to Moustacheminer Server Services!</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="Client_ready" id="ey^`cwFZ:-0^4H$4WbD|" collapsed="true">
+                    <value name="Client">
+                      <block type="variables_get" id="BJ6/R4IQ#|m[H!9*gEW]">
+                        <field name="VAR">client</field>
+                      </block>
+                    </value>
+                    <statement name="function">
+                      <block type="console_log" id="3l;U[reiqFQWo,VqO..n">
+                        <value name="text">
+                          <shadow type="text" id="yUZkx3k[y(eJm]zeFN`=">
+                            <field name="TEXT">abc</field>
+                          </shadow>
+                          <block type="text" id=";4_+yDfC*CP@?Vh{5[UE">
+                            <field name="TEXT">Client is ready</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="Client_message" id="pnNxXsPKV7MH`a9_.LU]">
+                        <field name="message">message</field>
+                        <value name="Client">
+                          <block type="variables_get" id="T1eAy.nkA]rL8%HySe7;">
+                            <field name="VAR">client</field>
+                          </block>
+                        </value>
+                        <statement name="function">
+                          <block type="controls_if" id="z=whDSZ}Fl!k3Q^zY9AE">
+                            <mutation elseif="1"></mutation>
+                            <value name="IF0">
+                              <block type="logic_compare" id="SPAQ=u4L!v0ZGToa_g-@">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block type="text_indexOf" id="~G(`?L^m$Y7hMXA}|LQp">
+                                    <field name="END">FIRST</field>
+                                    <value name="VALUE">
+                                      <block type="Message_content" id="(:(IbfJ2:V^YvXDzXE%b">
+                                        <value name="Message">
+                                          <block type="variables_get" id="O50l:FyZ]T88AI={pfd*">
+                                            <field name="VAR">message</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="FIND">
+                                      <shadow type="text" id="V1N|Hdnhc@@Wqt;R`-Zn">
+                                        <field name="TEXT">abc</field>
+                                      </shadow>
+                                      <block type="variables_get" id=")6wL,MvF%H~{X|TK)t3l">
+                                        <field name="VAR">prefix</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_number" id="NxM8Zhipw,G58{727u)Z">
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="variables_set" id="gd#%r%GDUAB7_Ye-G-!:">
+                                <field name="VAR">input</field>
+                                <value name="VALUE">
+                                  <block type="text_trim" id="yB2.)$ba:Co++kG3nBC}">
+                                    <field name="MODE">BOTH</field>
+                                    <value name="TEXT">
+                                      <shadow type="text" id="/n;rf1U7~aNz*.fMLOp2">
+                                        <field name="TEXT">abc</field>
+                                      </shadow>
+                                      <block type="text_getSubstring" id="72CIphdZTZ:]UlPXGBC+">
+                                        <mutation at1="true" at2="false"></mutation>
+                                        <field name="WHERE1">FROM_START</field>
+                                        <field name="WHERE2">LAST</field>
+                                        <value name="STRING">
+                                          <block type="Message_content" id="~+x?R#)BZ`^S;//9UMtI">
+                                            <value name="Message">
+                                              <block type="variables_get" id="Ej=2mD|-JG4`d]fXpS6i">
+                                                <field name="VAR">message</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="AT1">
+                                          <block type="math_arithmetic" id="aY:e?}!Qda)8g=OX@cmj">
+                                            <field name="OP">ADD</field>
+                                            <value name="A">
+                                              <block type="text_length" id="QF=cs$[aJcD2bmxaw{l:">
+                                                <value name="VALUE">
+                                                  <shadow type="text" id="VL.ZwC0I#2s4%9,8VsnT">
+                                                    <field name="TEXT">abc</field>
+                                                  </shadow>
+                                                  <block type="variables_get" id="sD?qT3-tDuwJ,_V`YmlS">
+                                                    <field name="VAR">prefix</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="math_number" id="_(m7J8,[h8%%JMF[TWlE">
+                                                <field name="NUM">1</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="console_log" id="wddUp*WWZ5m6FV]+mAn0">
+                                    <value name="text">
+                                      <shadow type="text" id="PY;`J%ekVNRM:+YzhiT9">
+                                        <field name="TEXT">abc</field>
+                                      </shadow>
+                                      <block type="variables_get" id="D4PafDkJX_C+4n9(:%_R">
+                                        <field name="VAR">input</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="controls_if" id="hR;TC`A(,aI+a8|+L3nz">
+                                        <value name="IF0">
+                                          <block type="variables_get" id="4mn1BtzsLT4cIP@A(eNz">
+                                            <field name="VAR">input</field>
+                                          </block>
+                                        </value>
+                                        <statement name="DO0">
+                                          <block type="variables_set" id="u_|nD(DC{Na8M`z2-]I.">
+                                            <field name="VAR">command</field>
+                                            <value name="VALUE">
+                                              <block type="lists_getIndex" id="4X;Va$Cha4}*!*^|FLx~">
+                                                <mutation statement="false" at="true"></mutation>
+                                                <field name="MODE">GET</field>
+                                                <field name="WHERE">FROM_START</field>
+                                                <value name="VALUE">
+                                                  <block type="lists_split" id="}iIANP$mk}cnfJgMQb6;">
+                                                    <mutation mode="SPLIT"></mutation>
+                                                    <field name="MODE">SPLIT</field>
+                                                    <value name="INPUT">
+                                                      <block type="variables_get" id="5KAq2Jd,!nOgBK/%DLPg">
+                                                        <field name="VAR">input</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="DELIM">
+                                                      <shadow type="text" id="=z=42)!thB^s5U!.@YR_">
+                                                        <field name="TEXT"> </field>
+                                                      </shadow>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <value name="AT">
+                                                  <block type="math_number" id="y30E1F8F]d%xyuti?HSC">
+                                                    <field name="NUM">1</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="variables_set" id="$6I(^08(;GT|yAj_Nyv:">
+                                                <field name="VAR">user</field>
+                                                <value name="VALUE">
+                                                  <block type="Message_author" id="aSAHAf|~W3ut~=${,ll.">
+                                                    <value name="Message">
+                                                      <block type="variables_get" id="uVsl*9Z9zIY!;ds`3}Xz">
+                                                        <field name="VAR">message</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="console_log" id="v]DtF45@]~P+l|B[oJY0">
+                                                    <value name="text">
+                                                      <shadow type="text" id="24k!mbTyD1$JPli{):l^">
+                                                        <field name="TEXT">abc</field>
+                                                      </shadow>
+                                                      <block type="variables_get" id="#mFZ{gw_ZKgeX=472D,K">
+                                                        <field name="VAR">command</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="controls_if" id="FED7Wh8DrSnQnnb:;.+[">
+                                                        <mutation elseif="3"></mutation>
+                                                        <value name="IF0">
+                                                          <block type="logic_compare" id="9!T,nJtFds|CK|wFJ+qg">
+                                                            <field name="OP">EQ</field>
+                                                            <value name="A">
+                                                              <block type="variables_get" id="n%d:g2i8DP8le|*qfn/d">
+                                                                <field name="VAR">command</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="B">
+                                                              <block type="text" id="4,%1Ph.gI#y6EOj0NGMY">
+                                                                <field name="TEXT">help</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <statement name="DO0">
+                                                          <block type="Message_reply" id="J:O.+R0YEiCgCf)7/asS">
+                                                            <value name="Message">
+                                                              <block type="variables_get" id="NLs^qd$/_AP/@fZM.1,p">
+                                                                <field name="VAR">message</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="content">
+                                                              <block type="text" id="j2)r10::!d^qdK!n!Ig{">
+                                                                <field name="TEXT">A wise man once said: _"I'll make my bot in Turkish"_ **Use the `&gt;&gt;yardım` command for help.**</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </statement>
+                                                        <value name="IF1">
+                                                          <block type="logic_compare" id="9RR(AHLtv-08KA;,[Dv.">
+                                                            <field name="OP">EQ</field>
+                                                            <value name="A">
+                                                              <block type="variables_get" id="H0nJdA3(IIoB[BhRq|M}">
+                                                                <field name="VAR">command</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="B">
+                                                              <block type="text" id="%pNJE|eHeGM:e+Nk:`k7">
+                                                                <field name="TEXT">yardım</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <statement name="DO1">
+                                                          <block type="Message_reply" id="%%3q$(Vu4zmy]Hax|)(F">
+                                                            <value name="Message">
+                                                              <block type="variables_get" id="c5MEW/K-^iIgze24toos">
+                                                                <field name="VAR">message</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="content">
+                                                              <block type="text" id="QeDD|BdYC[4APe_PDRe`">
+                                                                <field name="TEXT">TürkiyeYardımSa</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="options">
+                                                              <block type="mss_json_parse" id="Cr#C$`TG?1dMNP9eJOxy">
+                                                                <value name="json">
+                                                                  <block type="text" id="kSt{m~o5@E}Iy{Yf[(I~">
+                                                                    <field name="TEXT">{ 	"embed": { 		"title": "TürkiyeYardımSa", 		"description": "Bu bir bok gemisi. Amerika Birleşik Devletleri, Kaliforniya eyaletinde kansere neden olduğu biliniyorsa, lütfen kullanmayın. Eğer kullanırsan, dikkatli ol!", 		"url": "https://moustacheminer.com/", 		"fields": [ 			{ 				"name": "`&gt;&gt;help`", 				"value": "Provides nothing of use to the end user" 			}, 			{                 "name": "`&gt;&gt;yardım`",                 "value": "Provides nothing of use to the end user"             }, 			{                 "name": "`&gt;&gt;kullanıcı`",                 "value": "Provides nothing of use to the end user"             } 		] 	} }</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </statement>
+                                                        <value name="IF2">
+                                                          <block type="logic_compare" id="vPZ)b.ReuZM!AMBE8Pjf">
+                                                            <field name="OP">EQ</field>
+                                                            <value name="A">
+                                                              <block type="variables_get" id="aly]d3:mk48EY{26G4W;">
+                                                                <field name="VAR">command</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="B">
+                                                              <block type="text" id=".o;:kv|Ff:Ew|QoN_bS?">
+                                                                <field name="TEXT">kullanıcı</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <statement name="DO2">
+                                                          <block type="variables_set" id="(TL,Xdl-iaLSC.NJkU}=">
+                                                            <field name="VAR">object</field>
+                                                            <value name="VALUE">
+                                                              <block type="mss_object" id="jOK]PHAAy#Np@MfM4Pc="></block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="variables_set" id="E[|#n;mj*EKu.`s-zn7U">
+                                                                <field name="VAR">RichEmbed</field>
+                                                                <value name="VALUE">
+                                                                  <block type="RichEmbed_constructor" id="r.+sJ:6P%nW:2s(2Ev?J"></block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="variables_set" id="0Z96dgKfMQRW#w{GLPte">
+                                                                    <field name="VAR">RichEmbed</field>
+                                                                    <value name="VALUE">
+                                                                      <block type="RichEmbed_setTitle" id="uO*Tk*9@sCO*6FE=3Iq=">
+                                                                        <value name="RichEmbed">
+                                                                          <block type="variables_get" id="_c}J3qO!vuZ;Ip-k~5Ej">
+                                                                            <field name="VAR">RichEmbed</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="title">
+                                                                          <block type="User_username" id="wD1yDbtIja-Fl2$Ty|S[">
+                                                                            <value name="User">
+                                                                              <block type="variables_get" id="KJwbmjjY2xO_9xrLwVLN">
+                                                                                <field name="VAR">user</field>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="variables_set" id="P7BaXrS4yzv;zLDR^WPy">
+                                                                        <field name="VAR">RichEmbed</field>
+                                                                        <value name="VALUE">
+                                                                          <block type="RichEmbed_setURL" id="{sC`Z-)Cl^SSB[2dBftW">
+                                                                            <value name="RichEmbed">
+                                                                              <block type="variables_get" id="IG%Hdv_%t_7V+6ol_L;X">
+                                                                                <field name="VAR">RichEmbed</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <value name="url">
+                                                                              <block type="text" id="Wp.2D.,4/)75C|3?:l_`">
+                                                                                <field name="TEXT">https://moustacheminer.com/</field>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="variables_set" id="+GfHku@fVd!~_TRN]76$">
+                                                                            <field name="VAR">RichEmbed</field>
+                                                                            <value name="VALUE">
+                                                                              <block type="RichEmbed_setDescription" id="+RQm)A2ewY_xkS_afNEB">
+                                                                                <value name="RichEmbed">
+                                                                                  <block type="variables_get" id="}(2m*[W:Rn$ie`9`,F`3">
+                                                                                    <field name="VAR">RichEmbed</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <value name="description">
+                                                                                  <block type="text" id="gf8x`(02|SBo,!J~/|7o">
+                                                                                    <field name="TEXT">Kullanıcı</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                              </block>
+                                                                            </value>
+                                                                            <next>
+                                                                              <block type="variables_set" id="JKwo*~v$b`W%gN/h8nub">
+                                                                                <field name="VAR">RichEmbed</field>
+                                                                                <value name="VALUE">
+                                                                                  <block type="RichEmbed_setThumbnail" id="V@xA?z@KZHRx=,Vxt9n%">
+                                                                                    <value name="RichEmbed">
+                                                                                      <block type="variables_get" id="MP@JjZz~/5W^Hyv[_x89">
+                                                                                        <field name="VAR">RichEmbed</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <value name="url">
+                                                                                      <block type="User_displayAvatarURL" id="Jqr=R{TV].z#S;a%|g{1">
+                                                                                        <value name="User">
+                                                                                          <block type="variables_get" id="PNrroSS)OJiCmg+?O4(I">
+                                                                                            <field name="VAR">user</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <next>
+                                                                                  <block type="variables_set" id="[Mr%K:l?+(duCVLA:!Ul">
+                                                                                    <field name="VAR">RichEmbed</field>
+                                                                                    <value name="VALUE">
+                                                                                      <block type="RichEmbed_addField" id="|_jtTu8-J1uxOn]$a@HF" inline="false">
+                                                                                        <value name="RichEmbed">
+                                                                                          <block type="variables_get" id="D.qm2_V:GhfJA6mLo_^M">
+                                                                                            <field name="VAR">RichEmbed</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="name">
+                                                                                          <block type="text" id=",hgr),uIC,^sCi,?gedJ">
+                                                                                            <field name="TEXT">ID</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="value">
+                                                                                          <block type="User_id" id="d+Hg4hwy_Xx5oKe98Y-B">
+                                                                                            <value name="User">
+                                                                                              <block type="variables_get" id="5qF7Qs3=a9`Y`wvL_GM`">
+                                                                                                <field name="VAR">user</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="inline">
+                                                                                          <block type="logic_boolean" id="Zi;CGP_c=MqY%gkBsT+]">
+                                                                                            <field name="BOOL">TRUE</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <next>
+                                                                                      <block type="variables_set" id="S?]alQlMSagtaw4+Pi?n">
+                                                                                        <field name="VAR">RichEmbed</field>
+                                                                                        <value name="VALUE">
+                                                                                          <block type="RichEmbed_setDescription" id="7^?K2f?wY$MjH9H#`S{@">
+                                                                                            <value name="RichEmbed">
+                                                                                              <block type="variables_get" id="TwdJ9G:jjCc6{*+!`Ljf">
+                                                                                                <field name="VAR">RichEmbed</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <value name="description">
+                                                                                              <block type="text" id="}B34{%l(*]W4@(K5Xd{m">
+                                                                                                <field name="TEXT">Kullanıcı zamanında oluşturuldu</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <next>
+                                                                                          <block type="variables_set" id="2)FwPLwF{%Z(FIP],jWM">
+                                                                                            <field name="VAR">RichEmbed</field>
+                                                                                            <value name="VALUE">
+                                                                                              <block type="RichEmbed_setTimestamp" id="2m$Cbak3EWGmNtab3%d~">
+                                                                                                <value name="RichEmbed">
+                                                                                                  <block type="variables_get" id="[[x5o*_G)]d2M`.bj{Pk">
+                                                                                                    <field name="VAR">RichEmbed</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <value name="timestamp">
+                                                                                                  <block type="User_createdAt" id="zsFOr$UJ,g1e0W99pxTm">
+                                                                                                    <value name="User">
+                                                                                                      <block type="variables_get" id="*51ly:,/0CP*}u2?zbno">
+                                                                                                        <field name="VAR">user</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <next>
+                                                                                              <block type="mss_object_set" id="Y%`N/~XXme;z?{XAKV*7">
+                                                                                                <field name="key">embed</field>
+                                                                                                <value name="object">
+                                                                                                  <block type="variables_get" id="Z}elcx?DdoSlPN9(Va=j">
+                                                                                                    <field name="VAR">object</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <value name="token">
+                                                                                                  <block type="variables_get" id="B_0`I=ZKRm2..W%{FnG!">
+                                                                                                    <field name="VAR">RichEmbed</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <next>
+                                                                                                  <block type="Message_reply" id="%yn2}VgxZl!4@ImBRr|{">
+                                                                                                    <value name="Message">
+                                                                                                      <block type="variables_get" id="f%+8-Vz)V*Dyd7L=mmYe">
+                                                                                                        <field name="VAR">message</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <value name="content">
+                                                                                                      <block type="text" id="W1YitrnXtRW09cNV?{-/">
+                                                                                                        <field name="TEXT">bilgi</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <value name="options">
+                                                                                                      <block type="variables_get" id="eeD8q:5F*+@W.]a8O66M">
+                                                                                                        <field name="VAR">object</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </statement>
+                                                        <value name="IF3">
+                                                          <block type="logic_compare" id="YLIX@r%#7?D9wgf+6]cY">
+                                                            <field name="OP">EQ</field>
+                                                            <value name="A">
+                                                              <block type="variables_get" id="p;CF3q.i@@+,n8-/euEM">
+                                                                <field name="VAR">command</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="B">
+                                                              <block type="text" id="aB)qfj(9g-JB9[aTam7@">
+                                                                <field name="TEXT">lider</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <statement name="DO3">
+                                                          <block type="variables_set" id="ifa#I7V#t.+FQ%HX0WFB">
+                                                            <field name="VAR">object</field>
+                                                            <value name="VALUE">
+                                                              <block type="mss_object" id="}64xdQ#,.(sU;8M*d%+n"></block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="variables_set" id="F1/moy(m=UblL@L^**|m">
+                                                                <field name="VAR">RichEmbed</field>
+                                                                <value name="VALUE">
+                                                                  <block type="RichEmbed_setImage" id="R55#4ZdmCfs@l?%O|3?x">
+                                                                    <value name="RichEmbed">
+                                                                      <block type="variables_get" id="O|v}ejMGVi(bLn}(R-5E">
+                                                                        <field name="VAR">object</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="url">
+                                                                      <block type="text" id="NNk{Ow#CQFKVv4SR36Pg">
+                                                                        <field name="TEXT">https://upload.wikimedia.org/wikipedia/commons/5/5f/Elizabeth_II_greets_NASA_GSFC_employees%2C_May_8%2C_2007_edit.jpg</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="mss_object_set" id="%p4Cc!]wM5_e[(dup|nk">
+                                                                    <field name="key">embed</field>
+                                                                    <value name="object">
+                                                                      <block type="variables_get" id=";w/dPgtDZn%qT@t@mC0a">
+                                                                        <field name="VAR">object</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="token">
+                                                                      <block type="variables_get" id="*_yeUHsf4/mZb3f0cNr%">
+                                                                        <field name="VAR">RichEmbed</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="Message_reply" id="s1(k~y;Zw7:}[:6ppUev">
+                                                                        <value name="Message">
+                                                                          <block type="variables_get" id="u;`-5)Re#d:G,Ygh7{Xv">
+                                                                            <field name="VAR">message</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="content">
+                                                                          <block type="text" id="Qy/(*/5A29[+?3`]^uG3">
+                                                                            <field name="TEXT">Yüce lider</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="options">
+                                                                          <block type="variables_get" id="tUjA@;jx+KY?%FK4;VsQ">
+                                                                            <field name="VAR">object</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </statement>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </statement>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                            <value name="IF1">
+                              <block type="logic_compare" id="cs]Nz@Dc{}o(DEsPIy0,">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block type="text_changeCase" id="d3^_Het3ap}+T:9L^;w,">
+                                    <field name="CASE">LOWERCASE</field>
+                                    <value name="TEXT">
+                                      <shadow type="text" id="U4:UbO*/3_.oQDNG(VUc">
+                                        <field name="TEXT">abc</field>
+                                      </shadow>
+                                      <block type="Message_content" id="rg/?96g`=jcpE(`Tx#O$">
+                                        <value name="Message">
+                                          <block type="variables_get" id="@0a42FQGeoeZrfT{GiuL">
+                                            <field name="VAR">message</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="text" id="q,=*!kh@uHf0?brh3+im">
+                                    <field name="TEXT">sa</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO1">
+                              <block type="Message_reply" id="Ca/s6!rx:J|I:B}3V@Ad">
+                                <value name="Message">
+                                  <block type="variables_get" id="gmbCS9vZe!EPBsW),@^5">
+                                    <field name="VAR">message</field>
+                                  </block>
+                                </value>
+                                <value name="content">
+                                  <block type="text" id="/m]n8^L:;%0}{A?$H/P#">
+                                    <field name="TEXT">Iyi günün hoş vakti!</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="Message_react" id="Um!e]m`R7EDg~x+1V94L">
+                                    <value name="Message">
+                                      <block type="variables_get" id="cu}$)^K5mX,M5^~@ZZIN">
+                                        <field name="VAR">message</field>
+                                      </block>
+                                    </value>
+                                    <value name="emoji">
+                                      <block type="text" id="n]4u9t!AV2^,E*[=wWde">
+                                        <field name="TEXT">🇸</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="Message_react" id="F5432P~)fGAc|t77c-NP">
+                                        <value name="Message">
+                                          <block type="variables_get" id="Dj1oh1(S;eM/.d8Kfpr%">
+                                            <field name="VAR">message</field>
+                                          </block>
+                                        </value>
+                                        <value name="emoji">
+                                          <block type="text" id="*8S~MnjvV%4y7P5(R6?u">
+                                            <field name="TEXT">🇦</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

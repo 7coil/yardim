@@ -1,0 +1,25 @@
+{
+	"embed": {
+		"title": "TürkiyeYardımSa",
+		"description": "Bu bir bok gemisi. 7/24. 9/11. Amerika Birleşik Devletleri, Kaliforniya eyaletinde kansere neden olduğu biliniyorsa, lütfen kullanmayın. Eğer kullanırsan, dikkatli ol!",
+		"url": "https://moustacheminer.com/",
+		"fields": [
+			{
+				"name": "`>>help`",
+				"value": "Provides nothing of use to the end user"
+			},
+			{
+                "name": "`>>yardım`",
+                "value": "Provides nothing of use to the end user"
+            },
+			{
+                "name": "`>>kullanıcı`",
+                "value": "Provides nothing of use to the end user"
+            },
+			{
+                "name": "`>>lider`",
+                "value": "Provides nothing of use to the end user"
+            }
+		]
+	}
+}
