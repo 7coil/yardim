@@ -63,7 +63,6 @@
                         </value>
                         <statement name="function">
                           <block type="controls_if" id="z=whDSZ}Fl!k3Q^zY9AE">
-                            <mutation elseif="1"></mutation>
                             <value name="IF0">
                               <block type="logic_compare" id="SPAQ=u4L!v0ZGToa_g-@">
                                 <field name="OP">EQ</field>
@@ -217,7 +216,7 @@
                                                     </value>
                                                     <next>
                                                       <block type="controls_if" id="FED7Wh8DrSnQnnb:;.+[">
-                                                        <mutation elseif="3"></mutation>
+                                                        <mutation elseif="4"></mutation>
                                                         <value name="IF0">
                                                           <block type="logic_compare" id="9!T,nJtFds|CK|wFJ+qg">
                                                             <field name="OP">EQ</field>
@@ -585,6 +584,63 @@
                                                             </next>
                                                           </block>
                                                         </statement>
+                                                        <value name="IF4">
+                                                          <block type="logic_compare" id="cs]Nz@Dc{}o(DEsPIy0,">
+                                                            <field name="OP">EQ</field>
+                                                            <value name="A">
+                                                              <block type="variables_get" id="@0a42FQGeoeZrfT{GiuL">
+                                                                <field name="VAR">command</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="B">
+                                                              <block type="text" id="q,=*!kh@uHf0?brh3+im">
+                                                                <field name="TEXT">sa</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <statement name="DO4">
+                                                          <block type="Message_reply" id="Ca/s6!rx:J|I:B}3V@Ad">
+                                                            <value name="Message">
+                                                              <block type="variables_get" id="gmbCS9vZe!EPBsW),@^5">
+                                                                <field name="VAR">message</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="content">
+                                                              <block type="text" id="/m]n8^L:;%0}{A?$H/P#">
+                                                                <field name="TEXT">Iyi günün hoş vakti!</field>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="Message_react" id="Um!e]m`R7EDg~x+1V94L">
+                                                                <value name="Message">
+                                                                  <block type="variables_get" id="cu}$)^K5mX,M5^~@ZZIN">
+                                                                    <field name="VAR">message</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="emoji">
+                                                                  <block type="text" id="n]4u9t!AV2^,E*[=wWde">
+                                                                    <field name="TEXT">🇸</field>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="Message_react" id="F5432P~)fGAc|t77c-NP">
+                                                                    <value name="Message">
+                                                                      <block type="variables_get" id="Dj1oh1(S;eM/.d8Kfpr%">
+                                                                        <field name="VAR">message</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="emoji">
+                                                                      <block type="text" id="*8S~MnjvV%4y7P5(R6?u">
+                                                                        <field name="TEXT">🇦</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </statement>
                                                       </block>
                                                     </next>
                                                   </block>
@@ -593,75 +649,6 @@
                                             </next>
                                           </block>
                                         </statement>
-                                      </block>
-                                    </next>
-                                  </block>
-                                </next>
-                              </block>
-                            </statement>
-                            <value name="IF1">
-                              <block type="logic_compare" id="cs]Nz@Dc{}o(DEsPIy0,">
-                                <field name="OP">EQ</field>
-                                <value name="A">
-                                  <block type="text_changeCase" id="d3^_Het3ap}+T:9L^;w,">
-                                    <field name="CASE">LOWERCASE</field>
-                                    <value name="TEXT">
-                                      <shadow type="text" id="U4:UbO*/3_.oQDNG(VUc">
-                                        <field name="TEXT">abc</field>
-                                      </shadow>
-                                      <block type="Message_content" id="rg/?96g`=jcpE(`Tx#O$">
-                                        <value name="Message">
-                                          <block type="variables_get" id="@0a42FQGeoeZrfT{GiuL">
-                                            <field name="VAR">message</field>
-                                          </block>
-                                        </value>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </value>
-                                <value name="B">
-                                  <block type="text" id="q,=*!kh@uHf0?brh3+im">
-                                    <field name="TEXT">sa</field>
-                                  </block>
-                                </value>
-                              </block>
-                            </value>
-                            <statement name="DO1">
-                              <block type="Message_reply" id="Ca/s6!rx:J|I:B}3V@Ad">
-                                <value name="Message">
-                                  <block type="variables_get" id="gmbCS9vZe!EPBsW),@^5">
-                                    <field name="VAR">message</field>
-                                  </block>
-                                </value>
-                                <value name="content">
-                                  <block type="text" id="/m]n8^L:;%0}{A?$H/P#">
-                                    <field name="TEXT">Iyi günün hoş vakti!</field>
-                                  </block>
-                                </value>
-                                <next>
-                                  <block type="Message_react" id="Um!e]m`R7EDg~x+1V94L">
-                                    <value name="Message">
-                                      <block type="variables_get" id="cu}$)^K5mX,M5^~@ZZIN">
-                                        <field name="VAR">message</field>
-                                      </block>
-                                    </value>
-                                    <value name="emoji">
-                                      <block type="text" id="n]4u9t!AV2^,E*[=wWde">
-                                        <field name="TEXT">🇸</field>
-                                      </block>
-                                    </value>
-                                    <next>
-                                      <block type="Message_react" id="F5432P~)fGAc|t77c-NP">
-                                        <value name="Message">
-                                          <block type="variables_get" id="Dj1oh1(S;eM/.d8Kfpr%">
-                                            <field name="VAR">message</field>
-                                          </block>
-                                        </value>
-                                        <value name="emoji">
-                                          <block type="text" id="*8S~MnjvV%4y7P5(R6?u">
-                                            <field name="TEXT">🇦</field>
-                                          </block>
-                                        </value>
                                       </block>
                                     </next>
                                   </block>

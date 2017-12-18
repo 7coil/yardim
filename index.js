@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const querystring = require('querystring');
 const https = require('https');
-var client, command, guild, input, message, object, prefix, RichEmbed, user;
+var message, object, RichEmbed, command, user, input, prefix, client;
 
 function subsequenceFromStartLast(sequence, at1) {
   var start = at1;
@@ -25,7 +25,7 @@ client.on('ready', () => {  console.log('Client is ready');
       if (command == 'help') {
         message.reply('A wise man once said: _"I\'ll make my bot in Turkish"_ **Use the `>>yardım` command for help.**',);
       } else if (command == 'yardım') {
-        message.reply('TürkiyeYardımSa',(JSON.parse('{ 	"embed": { 		"title": "TürkiyeYardımSa", 		"description": "Bu bir bok gemisi. 7/24. 9/11. Amerika Birleşik Devletleri, Kaliforniya eyaletinde kansere neden olduğu biliniyorsa, lütfen kullanmayın. Eğer kullanırsan, dikkatli ol!", 		"url": "https://moustacheminer.com/", 		"fields": [ 			{ 				"name": "`>>help`", 				"value": "Provides nothing of use to the end user" 			}, 			{                 "name": "`>>yardım`",                 "value": "Provides nothing of use to the end user"             }, 			{                 "name": "`>>kullanıcı`",                 "value": "Provides nothing of use to the end user"             }, 			{                 "name": "`>>lider`",                 "value": "Provides nothing of use to the end user"             } 		] 	} }')));
+        message.reply('TürkiyeYardımSa',(JSON.parse('{ 	"embed": { 		"title": "TürkiyeYardımSa", 		"description": "Bu bir bok gemisi. Amerika Birleşik Devletleri, Kaliforniya eyaletinde kansere neden olduğu biliniyorsa, lütfen kullanmayın. Eğer kullanırsan, dikkatli ol!", 		"url": "https://moustacheminer.com/", 		"fields": [ 			{ 				"name": "`>>help`", 				"value": "Provides nothing of use to the end user" 			}, 			{                 "name": "`>>yardım`",                 "value": "Provides nothing of use to the end user"             }, 			{                 "name": "`>>kullanıcı`",                 "value": "Provides nothing of use to the end user"             } 		] 	} }')));
       } else if (command == 'kullanıcı') {
         object = ({});
         RichEmbed = (new Discord.RichEmbed());
@@ -40,15 +40,14 @@ client.on('ready', () => {  console.log('Client is ready');
         message.reply('bilgi',object);
       } else if (command == 'lider') {
         object = ({});
-        RichEmbed = (new Discord.RichEmbed());
-        RichEmbed = (RichEmbed.setImage('https://upload.wikimedia.org/wikipedia/commons/5/5f/Elizabeth_II_greets_NASA_GSFC_employees%2C_May_8%2C_2007_edit.jpg'));
+        RichEmbed = (object.setImage('https://upload.wikimedia.org/wikipedia/commons/5/5f/Elizabeth_II_greets_NASA_GSFC_employees%2C_May_8%2C_2007_edit.jpg'));
         object['embed'] = RichEmbed;
         message.reply('Yüce lider',object);
+      } else if (command == 'sa') {
+        message.reply('Iyi günün hoş vakti!',);
+        message.react('🇸');
+        message.react('🇦');
       }
     }
-  } else if ((message.content).toLowerCase() == 'sa') {
-    message.reply('Iyi günün hoş vakti!',);
-    message.react('🇸');
-    message.react('🇦');
   }
 });
